@@ -1,10 +1,10 @@
 version: '3'
 services:
-  valipay-backend:
+  valipay-frontend:
     build: .
     ports:
       - "3000:3000"
-    env_file:
-      - .env
     volumes:
       - .:/app
+    environment:
+      - NODE_ENV=production
